@@ -1,0 +1,36 @@
+body {
+    background: radial-gradient(circle, red, purple, blue, black);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+}
+
+.tom {
+    position: absolute;
+    height: 80px; /* Increase height */
+    animation: tom-chase 8s linear infinite;
+}
+
+.jerry {
+    position: absolute;
+    height: 80px; /* Increase height */
+    animation: jerry-run 8s linear infinite;
+}
+
+@keyframes tom-chase {
+    0% { left: -100px; top: 10%; }
+    100% { left: 100%; top: 10%; }
+}
+
+@keyframes jerry-run {
+    0% { left: 100%; top: 10%; }
+    100% { left: -100px; top: 10%; }
+}
